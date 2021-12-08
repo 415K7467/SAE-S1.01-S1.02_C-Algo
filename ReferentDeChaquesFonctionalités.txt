@@ -1,0 +1,6 @@
+Vincent:
+-déplacement du code d'origine dans la fonction compter
+-fonction compter (compte le nombre de personnes)
+
+David:
+-menu (choisir les fonctionnalités)
