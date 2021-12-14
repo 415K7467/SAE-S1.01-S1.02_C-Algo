@@ -36,6 +36,37 @@ int compter(FILE *fic, int nb_personne, char tuple[]) {
     return nb_personne;
 }
 
+int menu(){
+    int ch =0;
+    printf("\nQue voulez vous faire");
+    printf("\n\t1-Faire une recherche");
+    printf("\n\t2-Modifier une valeur");
+    printf("\n\t3-Supprimer une ligne");
+    printf("\n\t4-Ajouter une valeur");
+    printf("\n\t5-Tout afficher");
+    scanf("%d",&ch);
+    switch(ch){
+        case 1 :
+            printf("recherche();");
+            break;
+        case 2 :
+            printf("modifier();");
+            break;
+        case 3 :
+            printf("Supprimer();");
+            break;
+        case 4 :
+            printf("Ajouter();");
+            break;
+        case 5 :
+            printf("afficher();");
+            break;
+        default :
+            printf("Erreur de saisie");
+            break;
+    }
+}
+
 int main() {
     char c = '\0'; // or c=0; //code ASCII
     FILE *fic;
