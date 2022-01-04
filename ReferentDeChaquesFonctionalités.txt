@@ -1,6 +1,9 @@
 Vincent:
 -déplacement du code d'origine dans la fonction compter
 -fonction compter (compte le nombre de personnes)
+-menu tri
+-menu recherche
+-switch tri
 
 David:
 -menu (choisir les fonctionnalités)
@@ -11,4 +14,3 @@ Vincent et David:
 -fusion
 -cut_gauche
 -cut_droite
--fusion

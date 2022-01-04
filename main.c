@@ -73,50 +73,51 @@ int compter(FILE *fic, int nb_personne, char tuple[]) {
     return nb_personne;
 }
 
-int trier(FILE *fic,int trie){
-
+int trier(FILE *fic, int trie){
     trie=1;
 }
 
-switch_tri(FILE *fic,int trie, int x){
-    switch(x){
+void switch_tri(FILE *fic, int trie,int x){
+    switch(x) {
         case 1 :
-            if (trie!=1){
-                trier(fic,1);
+            if (trie != 1) {
+                trier(fic, 1);
             }
             break;
         case 2 :
-            if (trie!=2){
-                trier(fic,2);
+            if (trie != 2) {
+                trier(fic, 2);
             }
             break;
         case 3 :
-            if (trie!=3){
-                trier(fic,3);
+            if (trie != 3) {
+                trier(fic, 3);
             }
             break;
         case 4 :
-            if (trie!=4){
-                trier(fic,4);
+            if (trie != 4) {
+                trier(fic, 4);
             }
             break;
         case 5 :
-            if (trie!=5){
-                trier(fic,5);
+            if (trie != 5) {
+                trier(fic, 5);
             }
             break;
         case 6 :
-            if (trie!=6){
-                trier(fic,6);
-            }
-        case 7 :
-            if (trie!=7){
-                trier(fic,7);
+            if (trie != 6) {
+                trier(fic, 6);
             }
             break;
+        case 7 :
+            if (trie != 7) {
+                trier(fic, 7);
+            }
+            break;
+    }
 }
 
-int menu_tri(FILE *fic,int trie, char tuple[]){
+int menu_tri(FILE *fic, int trie, char tuple[]){
     int nb_personnes=0,x;
     printf("choisir ce que l'on recherche:");
     printf("\n\t1-tri par prénom\n");
@@ -128,11 +129,11 @@ int menu_tri(FILE *fic,int trie, char tuple[]){
     printf("\n\t7-tri par métier\n");
     scanf("%d", &x);
     if (x<=7){
-        switch_tri(*fic,tri,x);
+        switch_tri(fic,trie,x);
     }
 }
 
-int menu_recherche(FILE *fic,int trie, char tuple[]){
+int menu_recherche(FILE *fic, int trie, char tuple[]){
     int nb_personnes=0,x;
     printf("choisir ce que l'on recherche:");
     printf("\n\t1-recherche d'un prénom\n");
@@ -144,7 +145,7 @@ int menu_recherche(FILE *fic,int trie, char tuple[]){
     printf("\n\t7-recherche d'un métier\n");
     scanf("%d",&x);
     if (x<=7){
-        switch_tri(*fic,tri,x);
+        switch_tri(fic,trie,x);
     }
     int ig=0, id=compter(fic, nb_personnes, tuple)-1;   //ig= indice gauche; id=indice droit//
     rewind(fic);
@@ -186,7 +187,7 @@ int menu(FILE *fic, char tuple[]){
     }
 }
 
-int main() {
+int main(){
     char c = '\0'; // or c=0; //code ASCII
     FILE *fic;
     char tuple[130];
