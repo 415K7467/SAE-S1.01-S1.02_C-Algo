@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1637829700 source:c:\users\administrateur\onedrive - etu.univ-lyon1.fr\documents\s1\sae\sae1.2_c-algo\sae-s1.01-s1.02_c-algo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

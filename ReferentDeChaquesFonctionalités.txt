@@ -4,3 +4,11 @@ Vincent:
 
 David:
 -menu (choisir les fonctionnalités)
+-ajouter
+
+
+Vincent et David:
+-fusion
+-cut_gauche
+-cut_droite
+-fusion
