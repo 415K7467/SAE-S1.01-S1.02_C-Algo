@@ -17,6 +17,16 @@ typedef struct abonne {
     char profession[20];
 } ABONNE;
 
+void structure(){
+    FILE *fic = fopen(chemin, "r");
+    char tabl[500];
+    int nb=compter(fic, 0, tabl);
+    ABONNE *tableaudepointeur[nb]; //tableaudepointeur->prenom structure
+    for(int i=0; i<nb ;i++){
+        tableaudepointeur[i] = malloc(sizeof (ABONNE));
+    }
+}
+
 int menu(FILE *fic, char tuple[]){
     int ch =0, nb_personnes = 0,trie=0;
     printf("\nQue voulez vous faire");

@@ -7,6 +7,9 @@ CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj: \
 CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj: \
  ../fonctions.h \
  ../main.c
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj: \
+ ../fonctions.h \
+ ../other.c
 CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj: \
  ../fonctions.h \
  ../tri_recherche.c

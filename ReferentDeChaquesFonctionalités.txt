@@ -4,6 +4,7 @@ Vincent:
 -menu tri
 -menu recherche
 -switch tri
+-structure
 
 David:
 -menu (choisir les fonctionnalités)
