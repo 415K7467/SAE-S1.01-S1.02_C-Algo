@@ -128,6 +128,30 @@ SAE_S1_01_S1_02_C_Algo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/build
 .PHONY : SAE_S1_01_S1_02_C_Algo/fast
 
+ajouter_modifier_supprimer.obj: ajouter_modifier_supprimer.c.obj
+.PHONY : ajouter_modifier_supprimer.obj
+
+# target to build an object file
+ajouter_modifier_supprimer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj
+.PHONY : ajouter_modifier_supprimer.c.obj
+
+ajouter_modifier_supprimer.i: ajouter_modifier_supprimer.c.i
+.PHONY : ajouter_modifier_supprimer.i
+
+# target to preprocess a source file
+ajouter_modifier_supprimer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.i
+.PHONY : ajouter_modifier_supprimer.c.i
+
+ajouter_modifier_supprimer.s: ajouter_modifier_supprimer.c.s
+.PHONY : ajouter_modifier_supprimer.s
+
+# target to generate assembly for a file
+ajouter_modifier_supprimer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.s
+.PHONY : ajouter_modifier_supprimer.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -152,6 +176,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.s
 .PHONY : main.c.s
 
+tri_recherche.obj: tri_recherche.c.obj
+.PHONY : tri_recherche.obj
+
+# target to build an object file
+tri_recherche.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj
+.PHONY : tri_recherche.c.obj
+
+tri_recherche.i: tri_recherche.c.i
+.PHONY : tri_recherche.i
+
+# target to preprocess a source file
+tri_recherche.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.i
+.PHONY : tri_recherche.c.i
+
+tri_recherche.s: tri_recherche.c.s
+.PHONY : tri_recherche.s
+
+# target to generate assembly for a file
+tri_recherche.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.s
+.PHONY : tri_recherche.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SAE_S1_01_S1_02_C_Algo
+	@echo ... ajouter_modifier_supprimer.obj
+	@echo ... ajouter_modifier_supprimer.i
+	@echo ... ajouter_modifier_supprimer.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tri_recherche.obj
+	@echo ... tri_recherche.i
+	@echo ... tri_recherche.s
 .PHONY : help
 
 

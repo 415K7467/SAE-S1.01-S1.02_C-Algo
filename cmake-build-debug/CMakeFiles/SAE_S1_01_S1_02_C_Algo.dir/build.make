@@ -78,19 +78,49 @@ CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.s"
 	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\main.c" -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\main.c.s
 
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/flags.make
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj: ../ajouter_modifier_supprimer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\ajouter_modifier_supprimer.c.obj -c "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\ajouter_modifier_supprimer.c"
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.i"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\ajouter_modifier_supprimer.c" > CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\ajouter_modifier_supprimer.c.i
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.s"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\ajouter_modifier_supprimer.c" -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\ajouter_modifier_supprimer.c.s
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/flags.make
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj: ../tri_recherche.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\tri_recherche.c.obj -c "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\tri_recherche.c"
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.i"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\tri_recherche.c" > CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\tri_recherche.c.i
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.s"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\tri_recherche.c" -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\tri_recherche.c.s
+
 # Object files for target SAE_S1_01_S1_02_C_Algo
 SAE_S1_01_S1_02_C_Algo_OBJECTS = \
-"CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj"
+"CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj" \
+"CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj" \
+"CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj"
 
 # External object files for target SAE_S1_01_S1_02_C_Algo
 SAE_S1_01_S1_02_C_Algo_EXTERNAL_OBJECTS =
 
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj
+SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj
+SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/build.make
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/linklibs.rsp
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/objects1.rsp
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable SAE_S1_01_S1_02_C_Algo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable SAE_S1_01_S1_02_C_Algo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

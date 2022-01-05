@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj"
   "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj"
+  "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj"
   "SAE_S1_01_S1_02_C_Algo.exe"
   "SAE_S1_01_S1_02_C_Algo.exe.manifest"
   "SAE_S1_01_S1_02_C_Algo.pdb"
