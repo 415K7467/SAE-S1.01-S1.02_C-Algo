@@ -176,6 +176,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.s
 .PHONY : main.c.s
 
+other.obj: other.c.obj
+.PHONY : other.obj
+
+# target to build an object file
+other.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj
+.PHONY : other.c.obj
+
+other.i: other.c.i
+.PHONY : other.i
+
+# target to preprocess a source file
+other.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.i
+.PHONY : other.c.i
+
+other.s: other.c.s
+.PHONY : other.s
+
+# target to generate assembly for a file
+other.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.s
+.PHONY : other.c.s
+
 tri_recherche.obj: tri_recherche.c.obj
 .PHONY : tri_recherche.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... other.obj
+	@echo ... other.i
+	@echo ... other.s
 	@echo ... tri_recherche.obj
 	@echo ... tri_recherche.i
 	@echo ... tri_recherche.s
