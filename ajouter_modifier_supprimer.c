@@ -3,9 +3,9 @@
 #include <string.h>
 
 #include "fonctions.h"
-
-#define chemin "test.csv"
-//#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+extern int NBPERS;
+//#define chemin "test.csv"
+#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
 int modifier(int ligne,char choix,FILE *fic);
 
@@ -39,7 +39,7 @@ int ajouter(FILE *fic){
     printf("\nEntrer son M\202tier : ");
     gets(&chaine);
     fprintf(fic,"%s\n",chaine);
-
+    NBPERS++;
     fclose(fic);
     printf("Ajout reussi");
 

@@ -110,11 +110,29 @@ CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Utilisateur\Desktop\SAE-S1.01-S1.02_C-Algo-main\SAE-S1.01-S1.02_C-Algo\tri_recherche.c -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\tri_recherche.c.s
 
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.obj: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/flags.make
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.obj: ../Trie.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.obj"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\Trie.c.obj -c "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\Trie.c"
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.i"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\Trie.c" > CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\Trie.c.i
+
+CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.s"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\Trie.c" -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\Trie.c.s
+
 CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/flags.make
 CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj: ../other.c
+<<<<<<< HEAD
 CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Utilisateur\Desktop\SAE-S1.01-S1.02_C-Algo-main\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj -MF CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\other.c.obj.d -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\other.c.obj -c C:\Users\Utilisateur\Desktop\SAE-S1.01-S1.02_C-Algo-main\SAE-S1.01-S1.02_C-Algo\other.c
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj"
+	C:\Users\Administrateur\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\other.c.obj -c "C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\other.c"
+>>>>>>> main
 
 CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.i"
@@ -143,8 +161,13 @@ SAE_S1_01_S1_02_C_Algo_OBJECTS = \
 "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj" \
 "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj" \
 "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj" \
+<<<<<<< HEAD
 "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj" \
 "CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/test.c.obj"
+=======
+"CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.obj" \
+"CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj"
+>>>>>>> main
 
 # External object files for target SAE_S1_01_S1_02_C_Algo
 SAE_S1_01_S1_02_C_Algo_EXTERNAL_OBJECTS =
@@ -152,13 +175,18 @@ SAE_S1_01_S1_02_C_Algo_EXTERNAL_OBJECTS =
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/main.c.obj
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/ajouter_modifier_supprimer.c.obj
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/tri_recherche.c.obj
+SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.obj
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/other.c.obj
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/test.c.obj
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/build.make
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/linklibs.rsp
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/objects1.rsp
 SAE_S1_01_S1_02_C_Algo.exe: CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Utilisateur\Desktop\SAE-S1.01-S1.02_C-Algo-main\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable SAE_S1_01_S1_02_C_Algo.exe"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Administrateur\OneDrive - etu.univ-lyon1.fr\Documents\S1\SAE\SAE1.2_C-algo\SAE-S1.01-S1.02_C-Algo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable SAE_S1_01_S1_02_C_Algo.exe"
+>>>>>>> main
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
