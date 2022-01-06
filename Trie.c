@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "fonctions.h"
 
+#include "fonctions.h"
+extern int NBPERS;
 //#define chemin "test.csv"
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
@@ -10,7 +11,7 @@
 void switch_tri(FILE *fic, int trie,int x);
 
 int menu_tri(FILE *fic, int trie){
-    int nb_personnes=0,x;
+    int x;
     printf("choisir ce que l'on recherche:");
     printf("\n\t1-tri par prénom");
     printf("\n\t2-tri par nom");
@@ -75,13 +76,17 @@ void switch_tri(FILE *fic, int trie,int x){
 
 void trier(FILE *fic, int trie){
     char tab[130];
+    int i=0;
     rewind(fic);
     while (fgets(tab, 130, fic) != NULL) {
         char *token = strtok(tab, ",");
         while (token != NULL) {
             printf("%s\n", token);
+
             token = strtok(NULL, ",");
         }
+        //tableaudepointeur[i];
+        i++;
     }
     //utiliser la fonction structure
 }

@@ -5,6 +5,7 @@ Vincent:
 -menu recherche
 -switch tri
 -fonction structure
+-variable globale NBPERS
 
 David:
 -menu (choisir les fonctionnalités)

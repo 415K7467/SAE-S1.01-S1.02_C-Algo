@@ -1,9 +1,11 @@
 #ifndef SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 #define SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 
+
+extern int NBPERS;
 //main//
 void structure();
-int menu(FILE *fic);
+void menu(FILE *fic);
 int main();
 
 //ajouter-modifier-supprimmer//
@@ -19,7 +21,7 @@ int menu_recherche(FILE *fic, int trie);
 
 //other//
 char afficher_tout(FILE *fic);
-int compter(FILE *fic, int nb_personne);
+int compter(FILE *fic);
 
 
 #endif //SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H

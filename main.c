@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 #include "fonctions.h"
 
 //#define chemin "test.csv"
@@ -12,6 +11,7 @@ typedef struct abonne {
     char nom[20];
     char prenom[20];
     char adresse[30];
+    char codepost[5];
     char numTel[20];
     char adresseMail[20];
     char profession[20];
@@ -19,50 +19,52 @@ typedef struct abonne {
 
 void structure(){
     FILE *fic = fopen(chemin, "r");
-    int nb=compter(fic, 0);
+    int nb=compter(fic);
     ABONNE *tableaudepointeur[nb]; //tableaudepointeur[i]->prenom structure
     for(int i=0; i<nb ;i++){
         tableaudepointeur[i] = malloc(sizeof (ABONNE));
     }
 }
 
-int menu(FILE *fic){
-    int ch =0, nb_personnes = 0;
-    printf("\nQue voulez vous faire");
-    printf("\n\t1-Faire une recherche");
-    printf("\n\t2-Modifier une valeur");
-    printf("\n\t3-Supprimer une ligne");
-    printf("\n\t4-Ajouter une valeur");
-    printf("\n\t5-Tout afficher");
-    printf("\n\t6-Trier");
-    printf("\n\t7-Tout compter\n\n");
-    scanf("%d",&ch);
-    switch(ch){
-        case 1 :
-            menu_recherche(fic,0);
-            break;
-        case 2 :
-            printf("modifier();");
-            break;
-        case 3 :
-            printf("Supprimer();");
-            break;
-        case 4 :
-            ajouter(fic);
-            break;
-        case 5 :
-            afficher_tout(fic);
-            break;
-        case 6:
-            menu_tri(fic,0);
-            break;
-        case 7 :
-            nb_personnes = compter(fic, nb_personnes);
-            printf("il y a %d personnes",nb_personnes);
-            break;
-        default :
-            printf("Erreur de saisie");
-            break;
+void menu(FILE *fic){
+    char ch;
+    while (ch!='Q'){
+        printf("\nQue voulez vous faire");
+        printf("\n\t1-Faire une recherche");
+        printf("\n\t2-Modifier une valeur");
+        printf("\n\t3-Supprimer une ligne");
+        printf("\n\t4-Ajouter une valeur");
+        printf("\n\t5-Tout afficher");
+        printf("\n\t6-Trier");
+        printf("\n\t7-Tout compter");
+        printf("\n\tQ-Quitter\n\n");
+        scanf("%c",&ch);
+        switch(ch) {
+            case '1' :
+                menu_recherche(fic, 0);
+                break;
+            case '2' :
+                printf("modifier();");
+                break;
+            case '3' :
+                printf("Supprimer();");
+                break;
+            case '4' :
+                ajouter(fic);
+                break;
+            case '5' :
+                afficher_tout(fic);
+                break;
+            case '6':
+                menu_tri(fic, 0);
+                break;
+            case '7':
+                printf("il y a %d personnes", NBPERS);
+                break;
+            default :
+                printf("Erreur de saisie");
+                break;
+        }
     }
 }
 
@@ -75,6 +77,7 @@ int main(){
         puts("Pb d'ouverture du fichier annuaire !");
         exit(0);
     }
+    compter(fic);
     menu(fic);
     return 0;
 }

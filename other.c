@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "fonctions.h"
-
+int NBPERS;
 
 char afficher_tout(FILE *fic) {
     rewind(fic);
@@ -20,12 +20,12 @@ char afficher_tout(FILE *fic) {
     }
 }
 
-int compter(FILE *fic, int nb_personne) {
-    char tab[130];
+int compter(FILE *fic) {
+    NBPERS=0;
+    char tab[50000];
     rewind(fic);
-    while (fgets(tab, 130, fic) != NULL) {
-        nb_personne++;
+    while (fgets(tab, 50000, fic) != NULL) {
+        NBPERS++;
     }
-    return nb_personne;
 }
 
