@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+typedef struct abonne;
 #include "fonctions.h"
 extern int NBPERS;
 //#define chemin "test.csv"
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
-int modifier(int ligne,char choix,FILE *fic);
+//int modifier(int ligne,char choix,FILE *fic);
 
 int ajouter(FILE *fic){
     char chaine[100];
@@ -92,9 +92,10 @@ int menu_modifier(FILE *fic){
         default:
             break;
     }
-}
+}/*
 int modifier(int ligne,char choix,FILE *fic){
 
     fseek(fic,sizeof(ABONNE)*ligne,SEEK_SET);
 
 }
+*/

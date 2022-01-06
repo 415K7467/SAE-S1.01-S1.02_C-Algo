@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+typedef struct abonne;
 #include "fonctions.h"
 extern int NBPERS;
 
-#define chemin "test.csv"
-//#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+//#define chemin "test.csv"
+#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
 //----------------------------------------------Recherche----------------------------------------------//
 int menu_recherche(FILE *fic, int trie){
@@ -23,7 +23,7 @@ int menu_recherche(FILE *fic, int trie){
     if (x<=7){
         printf("erreur de saisie");
     }
-    switch_tri(fic,trie,x);
+    //switch_tri(fic,trie,x);
     int ig=0, id=NBPERS-1;   //ig= indice gauche; id=indice droit//
     rewind(fic);
 }

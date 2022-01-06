@@ -3,19 +3,11 @@
 #include <string.h>
 
 #include "fonctions.h"
+typedef struct abonne;
+//#define chemin "test.csv"
+#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
-#define chemin "test.csv"
-//#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
-typedef struct abonne {
-    char nom[20];
-    char prenom[20];
-    char adresse[30];
-    char codepost[5];
-    char numTel[20];
-    char adresseMail[20];
-    char profession[20];
-} ABONNE;
 
 void structure(){
     FILE *fic = fopen(chemin, "r");
@@ -55,9 +47,9 @@ void menu(FILE *fic){
             case '5' :
                 afficher_tout(fic);
                 break;
-            case '6':
+            /*case '6':
                 menu_tri(fic, 0);
-                break;
+                break;*/
             case '7':
                 printf("il y a %d personnes", NBPERS);
                 break;

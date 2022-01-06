@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+typedef struct abonne;
 #include "fonctions.h"
 extern int NBPERS;
 //#define chemin "test.csv"
