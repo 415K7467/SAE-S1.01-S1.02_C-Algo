@@ -1,5 +1,6 @@
 #ifndef SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 #define SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
+typedef struct abonne;
 
 //main//
 void structure();
