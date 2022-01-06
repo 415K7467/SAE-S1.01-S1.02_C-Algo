@@ -4,7 +4,7 @@ Vincent:
 -menu tri
 -menu recherche
 -switch tri
--structure
+-fonction structure
 
 David:
 -menu (choisir les fonctionnalités)
@@ -12,6 +12,7 @@ David:
 
 
 Vincent et David:
+/*
 -fusion
 -cut_gauche
--cut_droite
+-cut_droite*/

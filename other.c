@@ -5,11 +5,12 @@
 #include "fonctions.h"
 
 
-char afficher_tout(FILE *fic, char tuple[]) {
+char afficher_tout(FILE *fic) {
     rewind(fic);
-    while (fgets(tuple, 130, fic) != NULL) {
+    char tab[130];
+    while (fgets(tab, 130, fic) != NULL) {
         // Returns first token
-        char *token = strtok(tuple, ",");
+        char *token = strtok(tab, ",");
         // Keep printing tokens while one of the delimiters present in tuple.
 
         while (token != NULL) {
@@ -19,9 +20,10 @@ char afficher_tout(FILE *fic, char tuple[]) {
     }
 }
 
-int compter(FILE *fic, int nb_personne, char tuple[]) {
+int compter(FILE *fic, int nb_personne) {
+    char tab[130];
     rewind(fic);
-    while (fgets(tuple, 130, fic) != NULL) {
+    while (fgets(tab, 130, fic) != NULL) {
         nb_personne++;
     }
     return nb_personne;

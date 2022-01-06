@@ -7,7 +7,7 @@
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
 //----------------------------------------------Recherche----------------------------------------------//
-int menu_recherche(FILE *fic, int trie, char tuple[]){
+int menu_recherche(FILE *fic, int trie){
     int nb_personnes=0,x;
     printf("choisir ce que l'on recherche:");
     printf("\n\t1-recherche d'un prénom");
@@ -19,8 +19,9 @@ int menu_recherche(FILE *fic, int trie, char tuple[]){
     printf("\n\t7-recherche d'un métier\n");
     scanf("%d",&x);
     if (x<=7){
-        switch_tri(fic,trie,x);
+        printf("erreur de saisie");
     }
-    int ig=0, id=compter(fic, nb_personnes, tuple)-1;   //ig= indice gauche; id=indice droit//
+    switch_tri(fic,trie,x);
+    int ig=0, id=compter(fic, nb_personnes)-1;   //ig= indice gauche; id=indice droit//
     rewind(fic);
 }

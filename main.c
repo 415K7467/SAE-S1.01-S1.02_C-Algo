@@ -19,16 +19,15 @@ typedef struct abonne {
 
 void structure(){
     FILE *fic = fopen(chemin, "r");
-    char tabl[500];
-    int nb=compter(fic, 0, tabl);
-    ABONNE *tableaudepointeur[nb]; //tableaudepointeur->prenom structure
+    int nb=compter(fic, 0);
+    ABONNE *tableaudepointeur[nb]; //tableaudepointeur[i]->prenom structure
     for(int i=0; i<nb ;i++){
         tableaudepointeur[i] = malloc(sizeof (ABONNE));
     }
 }
 
-int menu(FILE *fic, char tuple[]){
-    int ch =0, nb_personnes = 0,trie=0;
+int menu(FILE *fic){
+    int ch =0, nb_personnes = 0;
     printf("\nQue voulez vous faire");
     printf("\n\t1-Faire une recherche");
     printf("\n\t2-Modifier une valeur");
@@ -40,7 +39,7 @@ int menu(FILE *fic, char tuple[]){
     scanf("%d",&ch);
     switch(ch){
         case 1 :
-            menu_recherche(fic,trie, tuple);
+            menu_recherche(fic,0);
             break;
         case 2 :
             printf("modifier();");
@@ -52,13 +51,13 @@ int menu(FILE *fic, char tuple[]){
             ajouter(fic);
             break;
         case 5 :
-            afficher_tout(fic, tuple);
+            afficher_tout(fic);
             break;
         case 6:
-            menu_tri(fic,trie,tuple);
+            menu_tri(fic,0);
             break;
         case 7 :
-            nb_personnes = compter(fic, nb_personnes, tuple);
+            nb_personnes = compter(fic, nb_personnes);
             printf("il y a %d personnes",nb_personnes);
             break;
         default :
@@ -70,13 +69,12 @@ int menu(FILE *fic, char tuple[]){
 int main(){
     char c = '\0'; // or c=0; //code ASCII
     FILE *fic;
-    char tuple[130];
     ABONNE personne;
     fic = fopen(chemin, "r");
     if (fic == NULL) {
         puts("Pb d'ouverture du fichier annuaire !");
         exit(0);
     }
-    menu(fic, tuple);
+    menu(fic);
     return 0;
 }
