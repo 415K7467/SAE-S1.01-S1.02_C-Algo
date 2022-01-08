@@ -4,6 +4,7 @@
 
 #include "fonctions.h"
 typedef struct abonne;
+extern int NBPERS;
 //#define chemin "test.csv"
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
@@ -11,10 +12,23 @@ typedef struct abonne;
 
 void structure(){
     FILE *fic = fopen(chemin, "r");
-    int nb=compter(fic);
-    ABONNE *tableaudepointeur[nb]; //tableaudepointeur[i]->prenom structure
-    for(int i=0; i<nb ;i++){
+    ABONNE *tableaudepointeur[NBPERS]; //tableaudepointeur[i]->prenom structure
+    for(int i=0; i<NBPERS ;i++){
         tableaudepointeur[i] = malloc(sizeof (ABONNE));
+    }
+    rewind(fic);
+    char tab[NBPERS],tmp[7];
+    while (fgets(tab, NBPERS, fic) != NULL) {
+        int a=0, j=1;
+        char *token = strtok(tab, ",");
+        while (token != NULL) {
+            tmp[a]=token;
+            token = strtok(NULL, ",");
+            a++;
+        }
+        ABONNE j ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};
+        tableaudepointeur[j]= &j;
+        j++;
     }
 }
 

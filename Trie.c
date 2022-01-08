@@ -10,6 +10,11 @@ extern int NBPERS;
 //----------------------------------------------Trie----------------------------------------------//
 void switch_tri(FILE *fic, int trie,int x);
 
+typedef struct liaison{
+    * addresse
+    char truc[30]       //peut correspondre au prénom; nom; adresse; numéro ...
+} LIASON;
+
 int menu_tri(FILE *fic, int trie){
     int x;
     printf("choisir ce que l'on recherche:");
@@ -75,18 +80,40 @@ void switch_tri(FILE *fic, int trie,int x){
 }
 
 void trier(FILE *fic, int trie){
-    char tab[130];
+    // fait la tab de trie//
+    LIASON tab[NBPERS];
     int i=0;
     rewind(fic);
-    while (fgets(tab, 130, fic) != NULL) {
+    while (fgets(tab, NBPERS, fic) != NULL) {
+        tab[i][0]= &tableaudepointeur[i]; //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
         char *token = strtok(tab, ",");
+        int a=-1;
         while (token != NULL) {
-            printf("%s\n", token);
-
+            a++;
+            if (a==trie){
+                tab[i][1]=token;
+            }
             token = strtok(NULL, ",");
         }
-        //tableaudepointeur[i];
+        printf("%s",tab[i]);
         i++;
     }
     //utiliser la fonction structure
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
