@@ -20,7 +20,7 @@ typedef struct liaison{
 
 void menu_tri(FILE *fic, int trie){
     int x;
-    printf("choisir ce que l'on recherche:");
+    printf("choisir par quoi l'on trie:");
     printf("\n\t1-tri par prenom");
     printf("\n\t2-tri par nom");
     printf("\n\t3-tri par ville");
@@ -93,26 +93,41 @@ void trier(FILE *fic, int trie){
     rewind(fic);
     while (fgets(tab, NBPERS, fic) != NULL) {
         tab[i].addresse= tab_abo[i]; //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
+        printf("%s\n",tab[i].addresse);
+        switch (trie) {
+            case 1:
+                tab[i].truc= *tab_abo[i].nom;
+                break;
+            case 2:
+                tab[i].truc= *tab_abo[i].prenom;
+                break;
+            case 3:
+                tab[i].truc= *tab_abo[i].adresse;
+                break;
+            case 4:
+                tab[i].truc= *tab_abo[i].codepost;
+                break;
+            case 5:
+                tab[i].truc= *tab_abo[i].numTel;
+                break;
+            case 6:
+                tab[i].truc= *tab_abo[i].adresseMail;
+                break;
+            case 7:
+                tab[i].truc= *tab_abo[i].profession;
+                break;
+        }
         char *token = strtok(tab, ",");
-        int a=-1;
         while (token != NULL) {
-            a++;
-            if (a==trie){tab[i].truc=token;}
             token = strtok(NULL, ",");
         }
         i++;
-        printf("%d\t",i);
+        printf("%d \t",i);
     }
-    printf("debut avec %d personnes:\n\n",NBPERS);
+    // à partir de là ça marche plus
+    printf("test");
     for(int j=0;j<NBPERS;j++){
-        for (int k=0;k<2;k++){
-            if (k==0){
-                printf("%s|",tab[j].addresse);
-            }
-            if (k==1){
-                printf("%s\n",tab[j].truc);
-            }
-        }
+                printf("addresse:\t%s| truc:\t%s\n",tab[j].addresse,tab[j].truc);
     }
     printf("fin");
 }
