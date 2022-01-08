@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-typedef struct abonne;
+
 #include "fonctions.h"
+typedef struct abonne ABONNE;
+
 extern int NBPERS;
+
 //#define chemin "test.csv"
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
@@ -11,22 +14,22 @@ extern int NBPERS;
 void switch_tri(FILE *fic, int trie,int x);
 
 typedef struct liaison{
-    * addresse
-    char truc[30]       //peut correspondre au prénom; nom; adresse; numéro ...
+    ABONNE addresse;
+    char truc;     //peut correspondre au prénom; nom; adresse; numéro ...
 } LIASON;
 
-int menu_tri(FILE *fic, int trie){
+void menu_tri(FILE *fic, int trie){
     int x;
     printf("choisir ce que l'on recherche:");
-    printf("\n\t1-tri par prénom");
+    printf("\n\t1-tri par prenom");
     printf("\n\t2-tri par nom");
     printf("\n\t3-tri par ville");
     printf("\n\t4-tri par code postal");
-    printf("\n\t5-tri par numéro de téléphone");
+    printf("\n\t5-tri par numero de telephone");
     printf("\n\t6-tri par mail");
-    printf("\n\t7-tri par métier\n");
+    printf("\n\t7-tri par metier\n");
     scanf("%d", &x);
-    if (x<=7){
+    if (x>7){
         printf("erreur de saisie");
     }
     switch_tri(fic,trie,x);
@@ -81,39 +84,35 @@ void switch_tri(FILE *fic, int trie,int x){
 
 void trier(FILE *fic, int trie){
     // fait la tab de trie//
+                                        //je sais pas ou le free(void *TABPOINT)
+    ABONNE tab_abo[NBPERS];
     LIASON tab[NBPERS];
+    tab_abo[NBPERS]= structure();
+
     int i=0;
     rewind(fic);
     while (fgets(tab, NBPERS, fic) != NULL) {
-        tab[i][0]= &tableaudepointeur[i]; //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
+        tab[i].addresse= tab_abo[i]; //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
         char *token = strtok(tab, ",");
         int a=-1;
         while (token != NULL) {
             a++;
-            if (a==trie){
-                tab[i][1]=token;
-            }
+            if (a==trie){tab[i].truc=token;}
             token = strtok(NULL, ",");
         }
-        printf("%s",tab[i]);
         i++;
+        printf("%d\t",i);
     }
-    //utiliser la fonction structure
+    printf("debut avec %d personnes:\n\n",NBPERS);
+    for(int j=0;j<NBPERS;j++){
+        for (int k=0;k<2;k++){
+            if (k==0){
+                printf("%s|",tab[j].addresse);
+            }
+            if (k==1){
+                printf("%s\n",tab[j].truc);
+            }
+        }
+    }
+    printf("fin");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

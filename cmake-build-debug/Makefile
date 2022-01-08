@@ -128,6 +128,30 @@ SAE_S1_01_S1_02_C_Algo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/build
 .PHONY : SAE_S1_01_S1_02_C_Algo/fast
 
+Trie.obj: Trie.c.obj
+.PHONY : Trie.obj
+
+# target to build an object file
+Trie.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.obj
+.PHONY : Trie.c.obj
+
+Trie.i: Trie.c.i
+.PHONY : Trie.i
+
+# target to preprocess a source file
+Trie.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.i
+.PHONY : Trie.c.i
+
+Trie.s: Trie.c.s
+.PHONY : Trie.s
+
+# target to generate assembly for a file
+Trie.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SAE_S1_01_S1_02_C_Algo.dir\build.make CMakeFiles/SAE_S1_01_S1_02_C_Algo.dir/Trie.c.s
+.PHONY : Trie.c.s
+
 ajouter_modifier_supprimer.obj: ajouter_modifier_supprimer.c.obj
 .PHONY : ajouter_modifier_supprimer.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SAE_S1_01_S1_02_C_Algo
+	@echo ... Trie.obj
+	@echo ... Trie.i
+	@echo ... Trie.s
 	@echo ... ajouter_modifier_supprimer.obj
 	@echo ... ajouter_modifier_supprimer.i
 	@echo ... ajouter_modifier_supprimer.s

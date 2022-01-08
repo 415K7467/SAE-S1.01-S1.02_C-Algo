@@ -13,7 +13,7 @@ typedef struct abonne {
 
 extern int NBPERS;
 //main//
-void structure();
+ABONNE structure();
 void menu(FILE *fic);
 int main();
 
@@ -23,7 +23,7 @@ int ajouter(FILE *fic);
 //trie//
 void trier(FILE *fic, int trie);
 void switch_tri(FILE *fic, int trie,int x);
-int menu_tri(FILE *fic, int trie);
+void menu_tri(FILE *fic, int trie);
 
 //recherche//
 int menu_recherche(FILE *fic, int trie);

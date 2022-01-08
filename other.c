@@ -7,8 +7,8 @@ int NBPERS;
 
 char afficher_tout(FILE *fic) {
     rewind(fic);
-    char tab[130];
-    while (fgets(tab, 130, fic) != NULL) {
+    char tab[NBPERS];
+    while (fgets(tab, NBPERS, fic) != NULL) {
         // Returns first token
         char *token = strtok(tab, ",");
         // Keep printing tokens while one of the delimiters present in tuple.

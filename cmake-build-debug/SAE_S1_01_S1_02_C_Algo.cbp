@@ -74,6 +74,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/Trie.c">
+			<Option target="SAE_S1_01_S1_02_C_Algo"/>
+		</Unit>
 		<Unit filename="C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/ajouter_modifier_supprimer.c">
 			<Option target="SAE_S1_01_S1_02_C_Algo"/>
 		</Unit>

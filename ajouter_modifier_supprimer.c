@@ -45,7 +45,7 @@ int ajouter(FILE *fic){
 
     return 0;
 }
-
+/*
 int menu_modifier(FILE *fic){
     int ligne,choixmodif;
     char chaine[100];
@@ -92,7 +92,9 @@ int menu_modifier(FILE *fic){
         default:
             break;
     }
-}/*
+}
+ */
+ /*
 int modifier(int ligne,char choix,FILE *fic){
 
     fseek(fic,sizeof(ABONNE)*ligne,SEEK_SET);

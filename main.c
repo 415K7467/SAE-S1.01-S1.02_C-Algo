@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "fonctions.h"
+
 typedef struct abonne;
 extern int NBPERS;
 //#define chemin "test.csv"
@@ -10,7 +11,7 @@ extern int NBPERS;
 
 
 
-void structure(){
+ABONNE structure(){
     FILE *fic = fopen(chemin, "r");
     ABONNE *tableaudepointeur[NBPERS]; //tableaudepointeur[i]->prenom structure
     for(int i=0; i<NBPERS ;i++){
@@ -19,22 +20,25 @@ void structure(){
     rewind(fic);
     char tab[NBPERS],tmp[7];
     while (fgets(tab, NBPERS, fic) != NULL) {
-        int a=0, j=1;
+        int a=0, j=0;
         char *token = strtok(tab, ",");
         while (token != NULL) {
             tmp[a]=token;
             token = strtok(NULL, ",");
             a++;
         }
-        ABONNE j ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};
-        tableaudepointeur[j]= &j;
+        ABONNE x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};
+        tableaudepointeur[j]= &x;
+
         j++;
     }
+    ABONNE *tableau_pointeur= &tableaudepointeur;
+    return *tableau_pointeur;
 }
 
 void menu(FILE *fic){
     char ch;
-    while (ch!='Q'){
+//    while (ch!='Q'){
         printf("\nQue voulez vous faire");
         printf("\n\t1-Faire une recherche");
         printf("\n\t2-Modifier une valeur");
@@ -61,16 +65,16 @@ void menu(FILE *fic){
             case '5' :
                 afficher_tout(fic);
                 break;
-            /*case '6':
+            case '6':
                 menu_tri(fic, 0);
-                break;*/
+                break;
             case '7':
                 printf("il y a %d personnes", NBPERS);
                 break;
             default :
                 printf("Erreur de saisie");
                 break;
-        }
+  //      }
     }
 }
 
