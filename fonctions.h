@@ -21,9 +21,9 @@ int main();
 int ajouter(FILE *fic);
 
 //trie//
-void trier(FILE *fic, int trie);
-void switch_tri(FILE *fic, int trie,int x);
-void menu_tri(FILE *fic, int trie);
+void trier(int trie);
+void switch_tri(int trie,int x);
+void menu_tri(int trie);
 
 //recherche//
 int menu_recherche(FILE *fic, int trie);

@@ -66,7 +66,7 @@ void menu(FILE *fic){
                 afficher_tout(fic);
                 break;
             case '6':
-                menu_tri(fic, 0);
+                menu_tri(0);
                 break;
             case '7':
                 printf("il y a %d personnes", NBPERS);
