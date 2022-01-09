@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-typedef struct abonne;
+
 #include "fonctions.h"
+typedef struct abonne ABONNE;
 int NBPERS;
 
-char afficher_tout(FILE *fic) {
+void afficher_tout(FILE *fic) {
     rewind(fic);
     char tab[NBPERS];
     while (fgets(tab, NBPERS, fic) != NULL) {
@@ -20,7 +20,7 @@ char afficher_tout(FILE *fic) {
     }
 }
 
-int compter(FILE *fic) {
+void compter(FILE *fic) {
     NBPERS=0;
     char tab[50000];
     rewind(fic);

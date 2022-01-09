@@ -14,7 +14,7 @@ extern int NBPERS;
 void switch_tri(FILE *fic, int trie,int x);
 
 typedef struct liaison{
-    ABONNE addresse;
+    ABONNE *ad;
     char truc;     //peut correspondre au prénom; nom; adresse; numéro ...
 } LIASON;
 
@@ -86,35 +86,41 @@ void trier(FILE *fic, int trie){
     // fait la tab de trie//
                                         //je sais pas ou le free(void *TABPOINT)
     ABONNE tab_abo[NBPERS];
-    LIASON tab[NBPERS];
     tab_abo[NBPERS]= structure();
+
+    LIASON *tab[NBPERS];
+    for(int i=0; i<NBPERS ;i++){
+        tab[i]=malloc(sizeof (LIASON));
+    }
 
     int i=0;
     rewind(fic);
     while (fgets(tab, NBPERS, fic) != NULL) {
-        tab[i].addresse= tab_abo[i]; //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
-        printf("%s\n",tab[i].addresse);
+        printf("test1");
+        tab[i]->ad=&tab_abo[i];         //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
+        printf("test2");
+        printf("%s\n",tab[i]->ad);
         switch (trie) {
             case 1:
-                tab[i].truc= *tab_abo[i].nom;
+                tab[i]->truc= *tab_abo[i].nom;
                 break;
             case 2:
-                tab[i].truc= *tab_abo[i].prenom;
+                tab[i]->truc= *tab_abo[i].prenom;
                 break;
             case 3:
-                tab[i].truc= *tab_abo[i].adresse;
+                tab[i]->truc= *tab_abo[i].adresse;
                 break;
             case 4:
-                tab[i].truc= *tab_abo[i].codepost;
+                tab[i]->truc= *tab_abo[i].codepost;
                 break;
             case 5:
-                tab[i].truc= *tab_abo[i].numTel;
+                tab[i]->truc= *tab_abo[i].numTel;
                 break;
             case 6:
-                tab[i].truc= *tab_abo[i].adresseMail;
+                tab[i]->truc= *tab_abo[i].adresseMail;
                 break;
             case 7:
-                tab[i].truc= *tab_abo[i].profession;
+                tab[i]->truc= *tab_abo[i].profession;
                 break;
         }
         char *token = strtok(tab, ",");
@@ -127,7 +133,7 @@ void trier(FILE *fic, int trie){
     // à partir de là ça marche plus
     printf("test");
     for(int j=0;j<NBPERS;j++){
-                printf("addresse:\t%s| truc:\t%s\n",tab[j].addresse,tab[j].truc);
+                printf("addresse:\t%s| truc:\t%s\n",tab[j]->ad,tab[j]->truc);
     }
     printf("fin");
 }

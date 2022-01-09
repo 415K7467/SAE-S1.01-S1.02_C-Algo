@@ -29,8 +29,8 @@ void menu_tri(FILE *fic, int trie);
 int menu_recherche(FILE *fic, int trie);
 
 //other//
-char afficher_tout(FILE *fic);
-int compter(FILE *fic);
+void afficher_tout(FILE *fic);
+void compter(FILE *fic);
 
 
 #endif //SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H

@@ -4,8 +4,7 @@
 
 #include "fonctions.h"
 
-typedef struct abonne;
-extern int NBPERS;
+typedef struct abonne ABONNE;
 //#define chemin "test.csv"
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
@@ -19,8 +18,9 @@ ABONNE structure(){
     }
     rewind(fic);
     char tab[NBPERS],tmp[7];
+    int j=0;
     while (fgets(tab, NBPERS, fic) != NULL) {
-        int a=0, j=0;
+        int a=0;
         char *token = strtok(tab, ",");
         while (token != NULL) {
             tmp[a]=token;
@@ -79,9 +79,7 @@ void menu(FILE *fic){
 }
 
 int main(){
-    char c = '\0'; // or c=0; //code ASCII
     FILE *fic;
-    ABONNE personne;
     fic = fopen(chemin, "r");
     if (fic == NULL) {
         puts("Pb d'ouverture du fichier annuaire !");
