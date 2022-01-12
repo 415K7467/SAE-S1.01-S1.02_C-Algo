@@ -4,10 +4,10 @@
 typedef struct abonne;
 #include "fonctions.h"
 extern int NBPERS;
-//#define chemin "test.csv"
-#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+#define chemin "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/test.csv"
+#define chemin2 "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/tmp.csv"
+//#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
-//int modifier(int ligne,char choix,FILE *fic);
 
 int ajouter(FILE *fic){
     char chaine[100];
@@ -42,62 +42,118 @@ int ajouter(FILE *fic){
     NBPERS++;
     fclose(fic);
     printf("Ajout reussi");
-
     return 0;
 }
-/*
-int menu_modifier(FILE *fic){
-    int ligne,choixmodif;
-    char chaine[100];
-    fclose(fic);
-    fic = fopen(chemin, "a") ;
-    if (fic==NULL){
-        puts("Pb d'ouverture du fichier annuaire !");
-        exit(1);
-    }
-    scanf("%d",&choixmodif);
-    printf("Quel donné voulez vous modier\n");
-    printf("\t1-Modifier le nom\n");
-    printf("\t2-Modifier le prenom\n");
-    printf("\t3-Modifier la ville\n");
-    printf("\t4-Modifier le code postal\n");
-    printf("\t5-Modifier le numéro de téléphone\n");
-    printf("\t6-Modifier l adresse mail\n");
-    printf("\t7-Modifier le métier\n");
-    scanf("%d",&choixmodif);
-    printf("Quel ligne voulez vous modifier\n");
-    scanf("%d",&ligne);
-    switch (choixmodif) {
-        case 1:
-            modifier(ligne,"nom",fic);
-            break;
-        case 2:
-            modifier(ligne,"prenom",fic);
-            break;
-        case 3:
-            modifier(ligne,"adresse",fic);
-            break;
-        case 4:
-            modifier(ligne,"codepost",fic);
-            break;
-        case 5:
-            modifier(ligne,"numTel",fic);
-            break;
-        case 6:
-            modifier(ligne,"adresseMail",fic);
-            break;
-        case 7:
-            modifier(ligne,"profession",fic);
-            break;
-        default:
-            break;
-    }
-}
- */
- /*
-int modifier(int ligne,char choix,FILE *fic){
 
-    fseek(fic,sizeof(ABONNE)*ligne,SEEK_SET);
+ void Supprimer(){
+     int del_ligne,temp=1;
+     FILE *fic = fopen(chemin, "r");
+     FILE *fichiertmp = fopen(chemin2, "w");
+     printf("Il y a %d ligne\n",NBPERS);
+     printf("Quel ligne voulez vous supprimer :\n");
+     scanf("%d",&del_ligne);
+     char ligne[200];
+     while(fgets(ligne,200,fic)!=NULL) {
+         if(temp != del_ligne ){
+         fputs(ligne, fichiertmp);
+         printf("ligne %d copier\n",temp);
+         }
+         temp++;
+     }
+     NBPERS--;
+     printf("les clients ont bien été copiés");
+     fclose(fichiertmp);
+     fclose(fic);
+     remove(chemin);
+     rename(chemin2, chemin);
 
-}
-*/
+ }
+
+ void modifier(){
+     char modif[40];
+     char tab[8][40];
+     int mod_ligne,temp=1,choixmodif,i=0,j=0,k=0;
+     FILE *fic = fopen(chemin, "r");
+     FILE *fichiertmp = fopen(chemin2, "w");
+     printf("Il y a %d ligne\n",NBPERS);
+     printf("Quel ligne voulez vous modifier :\n");
+     scanf("%d",&mod_ligne);
+     char ligne[200];
+     while(fgets(ligne,200,fic)!=NULL) {
+         if(temp != mod_ligne ){
+             fputs(ligne, fichiertmp);
+         }
+         if(temp == mod_ligne ) {
+             for (i; i < strlen(ligne); i++) {
+                 if (ligne[i] == ',') {
+                     k = 0;
+                     j++;
+                 } else {
+                     tab[j][k] = ligne[i];
+                     k++;
+                 }
+             }
+             printf("Quel donn\202 voulez vous modifier\n");
+             printf("\t1-Modifier le prenom\n");
+             printf("\t2-Modifier le nom\n");
+             printf("\t3-Modifier la ville\n");
+             printf("\t4-Modifier le code postal\n");
+             printf("\t5-Modifier le num\202ro de t\202l\202phone\n");
+             printf("\t6-Modifier l adresse mail\n");
+             printf("\t7-Modifier le m\202tier\n");
+             scanf("%d", &choixmodif);
+             i=0;
+             switch (choixmodif) {
+                 case 1:
+                     printf("\nEntrer son Prenom : ");
+                     break;
+                 case 2:
+                     printf("\nEntrer son Nom : ");
+                     break;
+                 case 3:
+                     printf("\nEntrer sa Ville : ");
+                     break;
+                 case 4:
+                     printf("\nEntrer son Code postal : ");
+                     break;
+                 case 5:
+                     printf("\nEntrer son Num\202ro de t\202l\202phone : ");
+                     break;
+                 case 6:
+                     printf("\nEntrer son Adresse Mail : ");
+                     break;
+                 case 7:
+                     printf("\nEntrer son M\202tier : ");
+                     break;
+                 default:
+                     break;
+             }
+             fflush(stdin);
+             gets(&modif);
+             while (i<40) {
+                 tab[choixmodif - 1][i] = modif[i];
+                 i++;
+             }
+             i=0,k=0;
+             while (i < 7) {
+                 k = 0;
+                 //printf("test");
+                 while (tab[i][k] != NULL) {
+                     printf("%c", tab[i][k]);
+                     fprintf(fichiertmp,"%c",tab[i][k]);
+                     k++;
+                 }
+                 printf("\n");
+                 fprintf(fichiertmp,",");
+                 i++;
+             }
+         }
+         temp++;
+     }
+     NBPERS--;
+     printf("Le client a \202t\202 modifier");
+     fclose(fichiertmp);
+     fclose(fic);
+     remove(chemin);
+     rename(chemin2, chemin);
+ }

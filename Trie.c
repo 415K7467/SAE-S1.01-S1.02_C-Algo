@@ -7,8 +7,8 @@ typedef struct abonne ABONNE;
 
 extern int NBPERS;
 
-//#define chemin "test.csv"
-#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+#define chemin "test.csv"
+//#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
 //----------------------------------------------Trie----------------------------------------------//
 void switch_tri(int trie,int x);
@@ -95,6 +95,7 @@ void trier(int trie){
 
 
    for(int i=0;i<NBPERS;i++) {
+       printf("%d",i);
         tab[i]->ad=&tab_abo[i];         //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
         switch (trie) {
             case 1:
@@ -119,12 +120,14 @@ void trier(int trie){
                 tab[i]->truc= *tab_abo[i].profession;
                 break;
         }
+       printf("%s\n",tab[i]->truc= *tab_abo[i].nom);
         char *token = strtok(tab, ",");
     }
     // à partir de là ça marche plus
     printf("debut\n");
    for(int j=0;j<NBPERS;j++){
-        printf("addresse:\t%A| truc:\t%c\n", tab[j]->ad, tab[j]->truc);
+        printf("addresse:\t%A| truc:\t%s\n", tab[j]->ad, tab[j]->truc);
+        printf("%d <%d\n",j,NBPERS);
     }
     printf("fin");
 }

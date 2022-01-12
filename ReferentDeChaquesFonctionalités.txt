@@ -10,6 +10,9 @@ Vincent:
 David:
 -menu (choisir les fonctionnalités)
 -ajouter
+-supprimer
+-modifier
+
 
 
 Vincent et David:

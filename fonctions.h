@@ -1,13 +1,13 @@
 #ifndef SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 #define SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 typedef struct abonne {
-    char nom[20];
-    char prenom[20];
-    char adresse[30];
+    char nom[40];
+    char prenom[40];
+    char adresse[40];
     char codepost[5];
-    char numTel[20];
-    char adresseMail[20];
-    char profession[20];
+    char numTel[15];
+    char adresseMail[40];
+    char profession[40];
 } ABONNE;
 
 
@@ -19,6 +19,8 @@ int main();
 
 //ajouter-modifier-supprimmer//
 int ajouter(FILE *fic);
+void modifier();
+void Supprimer();
 
 //trie//
 void trier(int trie);

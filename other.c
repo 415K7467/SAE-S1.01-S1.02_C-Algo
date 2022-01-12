@@ -6,6 +6,7 @@ typedef struct abonne ABONNE;
 int NBPERS;
 
 void afficher_tout(FILE *fic) {
+    int i;
     rewind(fic);
     char tab[NBPERS];
     while (fgets(tab, NBPERS, fic) != NULL) {
