@@ -4,9 +4,9 @@ typedef struct abonne {
     char nom[40];
     char prenom[40];
     char adresse[40];
-    char codepost[5];
+    char codepost[8];
     char numTel[15];
-    char adresseMail[40];
+    char adresseMail[50];
     char profession[40];
 } ABONNE;
 

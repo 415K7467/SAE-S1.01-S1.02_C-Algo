@@ -86,7 +86,7 @@ void trier(int trie){
     // fait la tab de trie//
                                         //je sais pas ou le free(void *TABPOINT)
     ABONNE tab_abo[NBPERS];
-    tab_abo[NBPERS]= structure();
+    //tab_abo[NBPERS]= structure();
 
     LIASON *tab[NBPERS];
     for(int i=0; i<NBPERS ;i++){

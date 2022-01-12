@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-typedef struct abonne;
 #include "fonctions.h"
-extern int NBPERS;
+
 #define chemin "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/test.csv"
 #define chemin2 "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/tmp.csv"
 //#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
 
+typedef struct abonne ABONNE;
+extern int NBPERS;
 
-int ajouter(FILE *fic){
+int ajouter(FILE *fic){ //Ajoute un Abonnée avec son prenom,nom,...
     char chaine[100];
     fclose(fic);
     fic = fopen(chemin, "a") ;
@@ -19,25 +20,25 @@ int ajouter(FILE *fic){
     }
     fflush(stdin);
     printf("\nEntrer son Prenom : ");
-    gets(&chaine);
-    fprintf(fic,"%s",chaine);
+    gets(chaine);
+    fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Nom : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer sa Ville : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Code postal : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Num\202ro de t\202l\202phone : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Adresse Mail : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son M\202tier : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s\n",chaine);
     NBPERS++;
     fclose(fic);
@@ -45,34 +46,34 @@ int ajouter(FILE *fic){
     return 0;
 }
 
- void Supprimer(){
-     int del_ligne,temp=1;
-     FILE *fic = fopen(chemin, "r");
-     FILE *fichiertmp = fopen(chemin2, "w");
-     printf("Il y a %d ligne\n",NBPERS);
-     printf("Quel ligne voulez vous supprimer :\n");
-     scanf("%d",&del_ligne);
-     char ligne[200];
-     while(fgets(ligne,200,fic)!=NULL) {
-         if(temp != del_ligne ){
-         fputs(ligne, fichiertmp);
-         printf("ligne %d copier\n",temp);
-         }
-         temp++;
-     }
-     NBPERS--;
-     printf("les clients ont bien été copiés");
-     fclose(fichiertmp);
-     fclose(fic);
-     remove(chemin);
-     rename(chemin2, chemin);
+void Supprimer(){ //supprime une ligne du fichier en sachant la ligne
+    int del_ligne,temp=1;
+    FILE *fic = fopen(chemin, "r");
+    FILE *fichiertmp = fopen(chemin2, "w");
+    printf("Il y a %d ligne\n",NBPERS);
+    printf("Quel ligne voulez vous supprimer :\n");
+    scanf("%d",&del_ligne);
+    char ligne[200];
+    while(fgets(ligne,200,fic)!=NULL) {
+        if(temp != del_ligne ){
+            fputs(ligne, fichiertmp);
+            printf("ligne %d copier\n",temp);
+        }
+        temp++;
+    }
+    NBPERS--;
+    printf("les clients ont bien été copiés");
+    fclose(fichiertmp);
+    fclose(fic);
+    remove(chemin);
+    rename(chemin2, chemin);
 
- }
+}
 
- void modifier(){
+ void modifier(){ //modifie soit le prenom,nom,... selon une ligne
      char modif[40];
      char tab[8][40];
-     int mod_ligne,temp=1,choixmodif,i=0,j=0,k=0;
+     int mod_ligne,temp=1,choixmodif,i,j=0,k=0;
      FILE *fic = fopen(chemin, "r");
      FILE *fichiertmp = fopen(chemin2, "w");
      printf("Il y a %d ligne\n",NBPERS);
@@ -84,7 +85,7 @@ int ajouter(FILE *fic){
              fputs(ligne, fichiertmp);
          }
          if(temp == mod_ligne ) {
-             for (i; i < strlen(ligne); i++) {
+             for (int i=0; i < strlen(ligne); i++) {
                  if (ligne[i] == ',') {
                      k = 0;
                      j++;
@@ -134,6 +135,7 @@ int ajouter(FILE *fic){
                  tab[choixmodif - 1][i] = modif[i];
                  i++;
              }
+             printf("\n");
              i=0,k=0;
              while (i < 7) {
                  k = 0;
@@ -151,9 +153,15 @@ int ajouter(FILE *fic){
          temp++;
      }
      NBPERS--;
+     printf("\ntest");
      printf("Le client a \202t\202 modifier");
+     printf("\ntest");
      fclose(fichiertmp);
+     printf("\ntest");
      fclose(fic);
-     remove(chemin);
-     rename(chemin2, chemin);
+     printf("\ntest");
+     int test = remove(chemin);
+     printf("\n\ttest%d",test);
+     test = rename(chemin2, chemin);
+     printf("\n\ttest%d",test);
  }

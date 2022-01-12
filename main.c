@@ -10,20 +10,21 @@ typedef struct abonne ABONNE;
 
 
 
-ABONNE structure(){
+/*ABONNE structure(){
     FILE *fic = fopen(chemin, "r");
-    ABONNE *tableaudepointeur[NBPERS]; //tableaudepointeur[i]->prenom structure
-    for(int i=0; i<NBPERS ;i++){
-        tableaudepointeur[i] = malloc(sizeof (ABONNE));
-    }
+    ABONNE *tableaudepointeur; //tableaudepointeur[i]->prenom structure
+
+
+        tableaudepointeur= (ABONNE *)malloc(sizeof (ABONNE)*NBPERS);
+
     rewind(fic);
-    char tab[NBPERS],tmp[7];
+    char* tmp[7];
     int j=0;
     while (fgets(tab, NBPERS, fic) != NULL) {
         int a=0;
         char *token = strtok(tab, ",");
         while (token != NULL) {
-            tmp[a]=token;
+            tmp[a]=*token;
             token = strtok(NULL, ",");
             a++;
         }
@@ -35,12 +36,12 @@ ABONNE structure(){
     ABONNE *tableau_pointeur= &tableaudepointeur;
     printf("%s",*tableau_pointeur->nom);
     return *tableau_pointeur;
-}
+}*/
 
 void menu(FILE *fic) {
-    char ch;
-    //getc(ch);
+    char ch='\0';
     while (ch != 'q') {
+        fflush(stdin);
         printf("\nQue voulez vous faire");
         printf("\n\t1-Faire une recherche");
         printf("\n\t2-Trier");
