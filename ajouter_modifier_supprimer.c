@@ -3,9 +3,11 @@
 #include <string.h>
 #include "fonctions.h"
 
-#define chemin "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/test.csv"
-#define chemin2 "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/tmp.csv"
-//#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+//#define chemin "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/test.csv"
+//#define chemin2 "C:/Users/Utilisateur/Desktop/SAE-S1.01-S1.02_C-Algo-main/9 janvier/SAE-S1.01-S1.02_C-Algo/tmp.csv"
+#define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+#define chemin2 "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/tmp.csv"
+
 
 typedef struct abonne ABONNE;
 extern int NBPERS;

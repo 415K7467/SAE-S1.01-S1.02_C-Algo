@@ -32,7 +32,7 @@ void structure(ABONNE* tableaudepointeur){
     }
 }
 
-void menu(FILE *fic) {
+void menu(FILE *fic, ABONNE *tab_point) {
     char ch='\0';
     while (ch != 'q') {
         fflush(stdin);
@@ -48,10 +48,10 @@ void menu(FILE *fic) {
         scanf("%c", &ch);
         switch (ch) {
             case '1' :
-                menu_recherche(fic, 0);
+                menu_recherche(fic, *tab_point);
                 break;
             case '2' :
-                menu_tri(0);
+                menu_tri(tab_point);
 
                 break;
             case '3' :
@@ -59,7 +59,6 @@ void menu(FILE *fic) {
                 break;
             case '4' :
                 modifier();
-
                 break;
             case '5' :
                 ajouter(fic);
