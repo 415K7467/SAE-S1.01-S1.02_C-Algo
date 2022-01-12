@@ -5,7 +5,7 @@
 typedef struct abonne ABONNE;
 int NBPERS;
 
-void afficher_tout(FILE *fic) {
+void afficher_tout(FILE *fic) {// affiche tous les abonnés dans le fichier
     rewind(fic);
     char tab[NBPERS];
     while (fgets(tab, NBPERS, fic) != NULL) {
@@ -20,7 +20,7 @@ void afficher_tout(FILE *fic) {
     }
 }
 
-void compter(FILE *fic) {
+void compter(FILE *fic) {//Compte le nombre de client
     NBPERS=0;
     char tab[50000];
     rewind(fic);

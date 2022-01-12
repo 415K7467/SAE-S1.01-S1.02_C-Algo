@@ -20,6 +20,8 @@ int main();
 
 //ajouter-modifier-supprimmer//
 int ajouter(FILE *fic);
+void modifier();
+void Supprimer();
 
 //trie//
 void trier(int x, ABONNE* tab_point);
