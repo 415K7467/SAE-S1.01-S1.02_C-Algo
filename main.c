@@ -7,17 +7,14 @@
 typedef struct abonne ABONNE;
 //#define chemin "test.csv"
 #define chemin "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Documents/S1/SAE/SAE1.2_C-algo/SAE-S1.01-S1.02_C-Algo/test.csv"
+int TRIE=0;
 
 
-
-ABONNE structure(){
+void structure(ABONNE* tableaudepointeur){
     FILE *fic = fopen(chemin, "r");
-    ABONNE *tableaudepointeur[NBPERS]; //tableaudepointeur[i]->prenom structure
-    for(int i=0; i<NBPERS ;i++){
-        tableaudepointeur[i] = malloc(sizeof (ABONNE));
-    }
+    //mettre    free(void *tableaudepointeur)       ?????????????????????????????
     rewind(fic);
-    char tab[NBPERS],tmp[7];
+    char tab[NBPERS],*tmp[7];
     int j=0;
     while (fgets(tab, NBPERS, fic) != NULL) {
         int a=0;
@@ -27,54 +24,50 @@ ABONNE structure(){
             token = strtok(NULL, ",");
             a++;
         }
-        ABONNE x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};
-        tableaudepointeur[j]= &x;
-
+        printf("test");
+        ABONNE x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};   //rentre les valeurs dans la structure ABONNE en fonction des critères
+        printf("test2");
+        *(tableaudepointeur+j)= x;
         j++;
     }
-    ABONNE *tableau_pointeur= &tableaudepointeur;
-    return *tableau_pointeur;
 }
 
-void menu(FILE *fic){
+void menu(FILE *fic,ABONNE* tab_point){ //menu des choix en général
     char ch;
-//    while (ch!='Q'){
-        printf("\nQue voulez vous faire");
-        printf("\n\t1-Faire une recherche");
-        printf("\n\t2-Modifier une valeur");
-        printf("\n\t3-Supprimer une ligne");
-        printf("\n\t4-Ajouter une valeur");
-        printf("\n\t5-Tout afficher");
-        printf("\n\t6-Trier");
-        printf("\n\t7-Tout compter");
-        printf("\n\tQ-Quitter\n\n");
-        scanf("%c",&ch);
-        switch(ch) {
-            case '1' :
-                menu_recherche(fic, 0);
-                break;
-            case '2' :
-                printf("modifier();");
-                break;
-            case '3' :
-                printf("Supprimer();");
-                break;
-            case '4' :
-                ajouter(fic);
-                break;
-            case '5' :
-                afficher_tout(fic);
-                break;
-            case '6':
-                menu_tri(0);
-                break;
-            case '7':
-                printf("il y a %d personnes", NBPERS);
-                break;
-            default :
-                printf("Erreur de saisie");
-                break;
-  //      }
+    printf("\nQue voulez vous faire");
+    printf("\n\t1-Faire une recherche");
+    printf("\n\t2-Modifier une valeur");
+    printf("\n\t3-Supprimer une ligne");
+    printf("\n\t4-Ajouter une valeur");
+    printf("\n\t5-Tout afficher");
+    printf("\n\t6-Trier");
+    printf("\n\t7-Tout compter");
+    scanf("%c",&ch);
+    switch(ch) {
+        case '1' :
+            menu_recherche(fic, *tab_point);
+            break;
+        case '2' :
+            printf("modifier(tab_point);");
+            break;
+        case '3' :
+            printf("Supprimer(tab_point);");
+            break;
+        case '4' :
+            ajouter(fic);
+            break;
+        case '5' :
+            afficher_tout(fic);
+            break;
+        case '6':
+            menu_tri(tab_point);
+            break;
+        case '7':
+            printf("il y a %d personnes", NBPERS);
+            break;
+        default :
+            printf("Erreur de saisie");
+            break;
     }
 }
 
@@ -86,6 +79,9 @@ int main(){
         exit(0);
     }
     compter(fic);
-    menu(fic);
+    ABONNE *tab_point;
+    tab_point=(ABONNE *) malloc(sizeof (ABONNE)*NBPERS);
+    structure(tab_point);
+    menu(fic,tab_point);
     return 0;
 }
