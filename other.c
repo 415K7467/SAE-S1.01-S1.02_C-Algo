@@ -7,7 +7,7 @@ int NBPERS;
 
 void afficher_tout(FILE *fic) {
     rewind(fic);
-    char tab[NBPERS];
+    char tab[220];
     while (fgets(tab, NBPERS, fic) != NULL) {
         // Returns first token
         char *token = strtok(tab, ",");

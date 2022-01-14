@@ -44,64 +44,54 @@ void verif_tri(int x, ABONNE* tab_point) { // vérifie si c'est déjà trié en 
 }
 
 void trier(int x, ABONNE* tab_abo) {//x correspond à la position du champs/critère de tri
-    printf("trie debut:%d\n",x);
-    // fait la tab de trie//
-    //ABONNE *tab_abo;
-    printf("trie 3:%d\n",x);
-    //tab_abo= (ABONNE *)malloc(sizeof(ABONNE) * NBPERS);
-    //tab_abo[NBPERS] = &tab_point;
-    printf("trie 4:%d\n",x);
-    LIASON tab[NBPERS];
-    printf("trie 5:%d\n",x);
-   /* for (int i = 0; i < NBPERS; i++) {
-        tab[i] = malloc(sizeof(LIASON));
-        printf("trie 6:%d\n",x);
-    }*/
-
+    LIASON *tab,*tmp[2];
+    tab=(LIASON *) malloc(sizeof (LIASON)*NBPERS);
     for (int i = 0; i < NBPERS; i++) {
-        printf("trie:%d\n",x);
-        tab[i].ad = (ABONNE) tab_abo[i];         //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
+        tmp[0] =  &tab_abo[i];         //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
         switch (x) {
             case 1:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = tab_abo[i].nom[j];
+                    tmp[1] = tab_abo[i].nom[j];
                 }
                 break;
             case 2:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = &tab_abo[i].prenom[j];
+                    tmp[1] = tab_abo[i].prenom[j];
                 }
                 break;
             case 3:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = &tab_abo[i].adresse[j];
+                    tmp[1]  = tab_abo[i].adresse[j];
                 }
                 break;
             case 4:
                 for (int j = 0; j < 5; j++) {
-                    tab[i].truc[j] = &tab_abo[i].codepost[j];
+                    tmp[1]  = tab_abo[i].codepost[j];
                 }
                 break;
             case 5:
                 for (int j = 0; j < 20; j++) {
-                    tab[i].truc[j] = &tab_abo[i].numTel[j];
+                    tmp[1]  = tab_abo[i].numTel[j];
                 }
                 break;
             case 6:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = &tab_abo[i].adresseMail[j];
+                    tmp[1] = tab_abo[i].adresseMail[j];
                 }
                 break;
             case 7:
                 printf("test");
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = tab_abo[i].profession[j];
-                    printf("test metier %s", &tab_abo[i].profession[j]);
+                    tmp[1]  = tab_abo[i].profession[j];
+                    printf("test metier:\t %s\n", tab_abo[i].profession[j]);
                 }
                 break;
             default:
                 printf("erreur %d\n",x);
         }
+        printf("%s",tmp[1]);
+        LIASON x={tmp[0],tmp[1]};
+        *(tab+i)=x;
     }
     printf("debut\n");
     for (int j = 0; j < NBPERS; j++) {

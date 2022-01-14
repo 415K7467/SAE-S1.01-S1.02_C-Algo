@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-typedef struct abonne;
+typedef struct abonne ABONNE;
 #include "fonctions.h"
 extern int NBPERS;
 //#define chemin "test.csv"
@@ -19,25 +19,25 @@ int ajouter(FILE *fic){
     }
     fflush(stdin);
     printf("\nEntrer son Prenom : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s",chaine);
     printf("\nEntrer son Nom : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer sa Ville : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Code postal : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Num\202ro de t\202l\202phone : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son Adresse Mail : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s,",chaine);
     printf("\nEntrer son M\202tier : ");
-    gets(&chaine);
+    gets(chaine);
     fprintf(fic,"%s\n",chaine);
     NBPERS++;
     fclose(fic);
