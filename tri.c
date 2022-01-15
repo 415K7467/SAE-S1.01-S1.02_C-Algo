@@ -1,17 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #include "fonctions.h"
 
 typedef struct abonne ABONNE;
 
-extern int NBPERS;
-extern int TRIE;
 //----------------------------------------------Trie----------------------------------------------//
-void verif_tri(int x, ABONNE* tab_point);
-
-void trier(int x, ABONNE* tab_point);
 
 typedef struct liaison {
     ABONNE ad;
@@ -69,27 +62,27 @@ void trier(int x, ABONNE* tab_abo) {//x correspond à la position du champs/crit
                 break;
             case 2:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = &tab_abo[i].prenom[j];
+                    tab[i].truc[j] = tab_abo[i].prenom[j];
                 }
                 break;
             case 3:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = &tab_abo[i].adresse[j];
+                    tab[i].truc[j] = tab_abo[i].adresse[j];
                 }
                 break;
             case 4:
                 for (int j = 0; j < 5; j++) {
-                    tab[i].truc[j] = &tab_abo[i].codepost[j];
+                    tab[i].truc[j] = tab_abo[i].codepost[j];
                 }
                 break;
             case 5:
                 for (int j = 0; j < 20; j++) {
-                    tab[i].truc[j] = &tab_abo[i].numTel[j];
+                    tab[i].truc[j] = tab_abo[i].numTel[j];
                 }
                 break;
             case 6:
                 for (int j = 0; j < 40; j++) {
-                    tab[i].truc[j] = &tab_abo[i].adresseMail[j];
+                    tab[i].truc[j] = tab_abo[i].adresseMail[j];
                 }
                 break;
             case 7:

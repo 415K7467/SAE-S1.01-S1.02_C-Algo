@@ -20,14 +20,14 @@ void structure(ABONNE* tableaudepointeur){
         int a=0;
         char *token = strtok(tab, ",");
         while (token != NULL) {
-            tmp[a]=*token;
+            tmp[a]=token;
             token = strtok(NULL, ",");
             a++;
         }
         printf("test");
-        ABONNE x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};   //rentre les valeurs dans la structure ABONNE en fonction des critères
+        ABONNE *x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};   //rentre les valeurs dans la structure ABONNE en fonction des critères
         printf("test2");
-        *(tableaudepointeur+j)= x;
+        *(tableaudepointeur+j)= *x;
         j++;
     }
 }

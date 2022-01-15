@@ -1,8 +1,0 @@
-, au début = il manque le prénom
-, à la fin, il manque la profession
-,, à la fin il manque mail+profession
-,, au début il manque nom+prenom
-
-...
-
-,,, = deux valeurs qui manque

@@ -29,7 +29,7 @@ void verif_tri(int x, ABONNE* tab_point);
 void menu_tri(ABONNE* tab_point);
 
 //recherche//
-int menu_recherche(FILE *fic,ABONNE tab_point);
+void menu_recherche(FILE *fic,ABONNE tab_point);
 
 //other//
 void afficher_tout(FILE *fic);
