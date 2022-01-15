@@ -1,10 +1,11 @@
 #include <stdio.h>
-
+#include <time.h>
 #include "fonctions.h"
 
 typedef struct abonne ABONNE;
 
 //----------------------------------------------Trie----------------------------------------------//
+//void triFusion(int i, int j, char *tab[], char tmp[]);
 
 typedef struct liaison {
     ABONNE ad;
@@ -30,7 +31,11 @@ void menu_tri(ABONNE* tab_point) {
 
 void verif_tri(int x, ABONNE* tab_point) { // vérifie si c'est déjà trié en fonction du critère choisi, la fonction est appellé par menu tri ou menu recherche car nous voulons faire la recherche par interpolation qui utilise un tableau déjà trié
     if (TRIE != x) {
+        clock_t startTime, endTime;
+        startTime = clock();
         trier(x, tab_point);
+        endTime = clock();
+        printf("\nTemps d'execution : %ld s.\n", (endTime - startTime) / CLOCKS_PER_SEC);
         TRIE = x;
     }
 }

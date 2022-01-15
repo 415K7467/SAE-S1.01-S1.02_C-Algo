@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <time.h>
 #include "fonctions.h"
 typedef struct abonne ABONNE;
 int NBPERS;
 
 void afficher_tout(FILE *fic) {// affiche tous les abonnés dans le fichier
+    clock_t startTime, endTime;
+    startTime = clock();
+
     rewind(fic);
     char tab[220];
     while (fgets(tab, NBPERS, fic) != NULL) {
@@ -18,6 +21,9 @@ void afficher_tout(FILE *fic) {// affiche tous les abonnés dans le fichier
             token = strtok(NULL, ",");
         }
     }
+
+    endTime = clock();
+    printf("\nTemps d'execution : %ld s.\n", (endTime - startTime) / CLOCKS_PER_SEC);
 }
 
 void compter(FILE *fic) {//Compte le nombre de client

@@ -10,6 +10,7 @@ Vincent:
 -structure LIAISON
 -fonction trier
 -fonction tri fusion
+-début de recherche_interpolation (qui évidement ne marche pas)
 Je souaitais utiliser la structure LIAISON pour trier; pour la recherche par interpolation il faut que la liste soit triée.
 Je suis resté bloqué sur cette partie, je n'ai donc pas pu faire le tri fusion et la recherche par interpolation que je voulais faire*/
 
