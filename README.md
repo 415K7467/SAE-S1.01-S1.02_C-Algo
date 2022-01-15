@@ -1,3 +1,4 @@
+**Le fichier point exe se trouve dans SAE-S1.01-S1.02_C-Algo\cmake-build-debug et se nomme SAE_S1_01_S1_02_C_Algo.exe**
 Les référents de chaques fonctionnalités sont dans le fichier ReferentDeChaquesFonctionalités.txt
 
 **Avant d'exécuter le programme veuillez remplacer l'addresse du fichier CSV par la votre.
