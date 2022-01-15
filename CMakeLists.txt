@@ -4,4 +4,4 @@ project(SAE_S1_01_S1_02_C_Algo C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(SAE_S1_01_S1_02_C_Algo
-        fonctions.h main.c Trie.c ajouter_modifier_supprimer.c tri_recherche.c other.c test.c )
+        fonctions.h main.c tri.c ajouter_modifier_supprimer.c recherche.c other.c test.c )

@@ -1,25 +1,20 @@
 Vincent:
--déplacement du code d'origine dans la fonction compter
 -fonction compter (compte le nombre de personnes)
 -menu tri
 -menu recherche
 -vérif tri
 -fonction structure
 -variable globale NBPERS
+-fichier fonction.h avec tou ce qu'il contient+ liaisons entre les différents fichiers c
+/* cette partie marche pas:
 -structure LIAISON
 -fonction trier
--fichier fonction.h avec tou ce qu'il contient+ liaisons entre les différents fichiers c
+Je souaitais utiliser la structure LIAISON pour trier; pour la recherche par interpolation il faut que la liste soit triée.
+Je suis resté bloqué sur cette partie, je n'ai donc pas pu faire le tri fusion et la recherche par interpolation que je voulais faire*/
+
 
 David:
 -menu (choisir les fonctionnalités)
 -ajouter
 -supprimer
 -modifier
-
-
-
-Vincent et David:
-/*
--fusion
--cut_gauche
--cut_droite*/

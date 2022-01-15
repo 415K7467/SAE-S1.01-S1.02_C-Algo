@@ -96,7 +96,6 @@ void trier(int x, ABONNE* tab_abo) {//x correspond à la position du champs/crit
                 printf("test");
                 for (int j = 0; j < 40; j++) {
                     tab[i].truc[j] = tab_abo[i].profession[j];
-                    printf("test metier %s", &tab_abo[i].profession[j]);
                 }
                 break;
             default:
