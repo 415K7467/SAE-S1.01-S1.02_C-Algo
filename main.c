@@ -23,9 +23,7 @@ void structure(ABONNE* tableaudepointeur){
             token = strtok(NULL, ",");
             a++;
         }
-        printf("test");
-        ABONNE *x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};   //rentre les valeurs dans la structure ABONNE en fonction des critères
-        printf("test2");
+        ABONNE *x ={tmp[0],tmp[1],tmp[2],tmp[3],tmp[4],tmp[5],tmp[6]};   //rentre les valeurs dans la structure ABONNE en fonction des critères         //cette ligne crash tout le temps
         *(tableaudepointeur+j)= *x;
         j++;
     }
@@ -33,7 +31,7 @@ void structure(ABONNE* tableaudepointeur){
 
 void menu(FILE *fic, ABONNE *tab_point) {
     char ch='\0';
-    while (ch != 'q') {
+    while (ch != 'q' && ch!='Q') {
         fflush(stdin);
         printf("\nQue voulez vous faire");
         printf("\n\t1-Faire une recherche");
@@ -69,6 +67,7 @@ void menu(FILE *fic, ABONNE *tab_point) {
                 printf("il y a %d personnes", NBPERS);
                 break;
             case'q':
+            case'Q':
                 printf("Quitter");
                 break;
             default :

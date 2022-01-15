@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Bureau/Nouveau dossier/SAE-S1.01-S1.02_C-Algo
+# Install script for directory: C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Bureau/Nouveau dossier (2)/SAE-S1.01-S1.02_C-Algo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Bureau/Nouveau dossier/SAE-S1.01-S1.02_C-Algo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Administrateur/OneDrive - etu.univ-lyon1.fr/Bureau/Nouveau dossier (2)/SAE-S1.01-S1.02_C-Algo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

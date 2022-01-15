@@ -30,29 +30,23 @@ void menu_tri(ABONNE* tab_point) {
 
 void verif_tri(int x, ABONNE* tab_point) { // vérifie si c'est déjà trié en fonction du critère choisi, la fonction est appellé par menu tri ou menu recherche car nous voulons faire la recherche par interpolation qui utilise un tableau déjà trié
     if (TRIE != x) {
-        printf("test,%d\n",x);
         trier(x, tab_point);
         TRIE = x;
     }
 }
 
 void trier(int x, ABONNE* tab_abo) {//x correspond à la position du champs/critère de tri
-    printf("trie debut:%d\n",x);
     // fait la tab de trie//
     //ABONNE *tab_abo;
-    printf("trie 3:%d\n",x);
     //tab_abo= (ABONNE *)malloc(sizeof(ABONNE) * NBPERS);
     //tab_abo[NBPERS] = &tab_point;
-    printf("trie 4:%d\n",x);
     LIASON tab[NBPERS];
-    printf("trie 5:%d\n",x);
    /* for (int i = 0; i < NBPERS; i++) {
         tab[i] = malloc(sizeof(LIASON));
         printf("trie 6:%d\n",x);
     }*/
 
     for (int i = 0; i < NBPERS; i++) {
-        printf("trie:%d\n",x);
         tab[i].ad = (ABONNE) tab_abo[i];         //mettre l'addresse de la struct      ;       //tableaudepointeur[i]; ?????
         switch (x) {
             case 1:
@@ -86,7 +80,6 @@ void trier(int x, ABONNE* tab_abo) {//x correspond à la position du champs/crit
                 }
                 break;
             case 7:
-                printf("test");
                 for (int j = 0; j < 40; j++) {
                     tab[i].truc[j] = tab_abo[i].profession[j];
                 }
@@ -95,9 +88,47 @@ void trier(int x, ABONNE* tab_abo) {//x correspond à la position du champs/crit
                 printf("erreur %d\n",x);
         }
     }
+    //La partie si dessous est la fin de la partie du tri, le tri n'a pas été fait la structure liaison ne fonctionne pas
     printf("debut\n");
     for (int j = 0; j < NBPERS; j++) {
-        printf("addresse:\t%p| truc:\t%s\n", tab[j].ad, tab[j].truc);
+        printf("addresse:\t%p| truc:\t%s\n", tab[j].ad, tab[j].truc); // Cette partie montre que y a pas les bons trucs dans liaison dsfgshdgreqsgcwvxciutjgkl,h,jigncrjdngfdjb
     }
     printf("fin");
+    //char *tmp[NBPERS];
+    //triFusion(ig=0, id=NBPERS-1,tab[NBPERS], tmp[NBPERS];)
 }
+
+/*
+void triFusion(int i, int j, char *tab[], char tmp[]) {
+
+    if(j <= i){ return;}
+
+    int m = (i + j) / 2;
+    triFusion(i, m, tab, tmp);     //trier la moitié gauche récursivement
+    triFusion(m + 1, j, tab, tmp); //trier la moitié droite récursivement
+    int pg = i;
+    int pd = m + 1;
+    int c;
+//boucle pour remplir le tableau final fusionné
+    for(c = i; c <= j; c++) {
+        if(pg == m + 1) {               //tout ce qui est en dessous ne va pas, il ne faut pas échanger les valeurs mais échanger les addresses et comparer le contenu des addresses
+            tmp[c] = tab[pd][1];
+            pd++;
+        }
+        else if (pd== j + 1) {
+            tmp[c] = tab[pg][1];
+            pg++;
+        }
+        else if (tab[pg][1] < tab[pd][1]) {
+            tmp[c] = tab[pg][1];
+            pg++;
+        }
+        else {
+            tmp[c] = tab[pd][1];
+            pd++;
+        }
+    }
+    for(c = i; c <= j; c++) {
+        //tab[c][1] = tmp[c];//copier les éléments de tmp[] à tab[] On cherche pas à faire ça vu qu'on veut passer par adresse
+    }
+}*/
