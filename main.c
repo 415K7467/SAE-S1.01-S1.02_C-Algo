@@ -19,7 +19,7 @@ void structure(ABONNE* tableaudepointeur){
         int a=0;
         char *token = strtok(tab, ",");
         while (token != NULL) {
-            tmp[a]=token;
+            tmp[a]=*token;
             token = strtok(NULL, ",");
             a++;
         }
@@ -29,44 +29,52 @@ void structure(ABONNE* tableaudepointeur){
     }
 }
 
-void menu(FILE *fic,ABONNE* tab_point){ //menu des choix en général
-    char ch;
-    printf("\nQue voulez vous faire");
-    printf("\n\t1-Faire une recherche");
-    printf("\n\t2-Modifier une valeur");
-    printf("\n\t3-Supprimer une ligne");
-    printf("\n\t4-Ajouter une valeur");
-    printf("\n\t5-Tout afficher");
-    printf("\n\t6-Trier");
-    printf("\n\t7-Tout compter");
-    scanf("%c",&ch);
-    switch(ch) {
-        case '1' :
-            menu_recherche(fic, *tab_point);
-            break;
-        case '2' :
-            printf("modifier(tab_point);");
-            break;
-        case '3' :
-            printf("Supprimer(tab_point);");
-            break;
-        case '4' :
-            ajouter(fic);
-            break;
-        case '5' :
-            afficher_tout(fic);
-            break;
-        case '6':
-            menu_tri(tab_point);
-            break;
-        case '7':
-            printf("il y a %d personnes", NBPERS);
-            break;
-        default :
-            printf("Erreur de saisie");
-            break;
+void menu(FILE *fic, ABONNE *tab_point) {
+    char ch='\0';
+    while (ch != 'q') {
+        fflush(stdin);
+        printf("\nQue voulez vous faire");
+        printf("\n\t1-Faire une recherche");
+        printf("\n\t2-Trier");
+        printf("\n\t3-Supprimer une ligne");
+        printf("\n\t4-Modifier une valeur");
+        printf("\n\t5-Ajouter une valeur");
+        printf("\n\t6-Tout afficher");
+        printf("\n\t7-Tout compter");
+        printf("\n\tQ-Quitter\n\n");
+        scanf("%c", &ch);
+        switch (ch) {
+            case '1' :
+                menu_recherche(fic, *tab_point);
+                break;
+            case '2' :
+                menu_tri(tab_point);
+
+                break;
+            case '3' :
+                Supprimer();
+                break;
+            case '4' :
+                modifier();
+                break;
+            case '5' :
+                ajouter(fic);
+                break;
+            case '6':
+                afficher_tout(fic);
+                break;
+            case '7':
+                printf("il y a %d personnes", NBPERS);
+                break;
+            case'q':
+                printf("Quitter");
+                break;
+            default :
+                printf("Erreur de saisie");
+                break;
+            }
+        }
     }
-}
 
 int main(){
     FILE *fic;

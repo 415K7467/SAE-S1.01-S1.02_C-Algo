@@ -9,13 +9,13 @@ extern int TRIE;
 int menu_recherche(FILE *fic,ABONNE tab_point){
     int x;
     printf("choisir ce que l'on recherche:");
-    printf("\n\t1-recherche d'un prénom");
+    printf("\n\t1-recherche d'un pr\202nom");
     printf("\n\t2-recherche d'un nom");
     printf("\n\t3-recherche d'une ville");
     printf("\n\t4-recherche d'un code postal");
-    printf("\n\t5-recherche d'un numéro de téléphone");
+    printf("\n\t5-recherche d'un num\202ro de t\202l\202phone");
     printf("\n\t6-recherche d'un mail");
-    printf("\n\t7-recherche d'un métier\n");
+    printf("\n\t7-recherche d'un m\202tier\n");
     scanf("%d",&x);
     if (x<=7){
         printf("erreur de saisie");

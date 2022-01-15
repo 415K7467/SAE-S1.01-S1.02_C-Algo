@@ -3,13 +3,19 @@ Vincent:
 -fonction compter (compte le nombre de personnes)
 -menu tri
 -menu recherche
--switch tri
+-vérif tri
 -fonction structure
 -variable globale NBPERS
+-structure LIAISON
+-fonction trier
+-fichier fonction.h avec tou ce qu'il contient+ liaisons entre les différents fichiers c
 
 David:
 -menu (choisir les fonctionnalités)
 -ajouter
+-supprimer
+-modifier
+
 
 
 Vincent et David:
