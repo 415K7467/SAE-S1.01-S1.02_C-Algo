@@ -1,13 +1,13 @@
 #ifndef SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 #define SAE_S1_01_S1_02_C_ALGO_FONCTIONS_H
 typedef struct abonne {
-    char nom[40];
-    char prenom[40];
-    char adresse[40];
-    char codepost[5];
-    char numTel[20];
-    char adresseMail[40];
-    char profession[40];
+    char * nom[40];
+    char * prenom[40];
+    char * adresse[40];
+    char * codepost[5];
+    char * numTel[20];
+    char * adresseMail[40];
+    char * profession[40];
 } ABONNE;
 
 extern int TRIE;

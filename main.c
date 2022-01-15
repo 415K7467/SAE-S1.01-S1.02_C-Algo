@@ -12,9 +12,8 @@ int TRIE=0;
 
 void structure(ABONNE* tableaudepointeur){
     FILE *fic = fopen(chemin, "r");
-    //mettre    free(void *tableaudepointeur)       ?????????????????????????????
     rewind(fic);
-    char tab[NBPERS],*tmp[7];
+    char tab[220],*tmp[7];
     int j=0;
     while (fgets(tab, NBPERS, fic) != NULL) {
         int a=0;
@@ -88,8 +87,9 @@ int main(){
     }
     compter(fic);
     ABONNE *tab_point;
-    tab_point=(ABONNE *) malloc(sizeof (ABONNE)*NBPERS);
+    tab_point=(ABONNE *) malloc((sizeof (ABONNE)*NBPERS*NBPERS));
     structure(tab_point);
     menu(fic,tab_point);
+    //free(void *tab_point)
     return 0;
 }

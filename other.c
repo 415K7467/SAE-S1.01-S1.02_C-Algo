@@ -7,7 +7,7 @@ int NBPERS;
 
 void afficher_tout(FILE *fic) {// affiche tous les abonnés dans le fichier
     rewind(fic);
-    char tab[NBPERS];
+    char tab[220];
     while (fgets(tab, NBPERS, fic) != NULL) {
         // Returns first token
         char *token = strtok(tab, ",");
